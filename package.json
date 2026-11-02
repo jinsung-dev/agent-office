@@ -1,0 +1,55 @@
+{
+  "name": "agent-office",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Say what you want, and a team of Claude Code agents gets to work in a pixel-art office. Bring your own characters. Korean and English.",
+  "license": "MIT",
+  "author": "jinsung-dev",
+  "homepage": "https://github.com/jinsung-dev/agent-office#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinsung-dev/agent-office.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jinsung-dev/agent-office/issues"
+  },
+  "keywords": [
+    "claude-code",
+    "agents",
+    "ai-agents",
+    "pixel-art",
+    "subagents",
+    "skins"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node scripts/check-node.mjs && vite build --logLevel warn && node server/index.ts --open",
+    "orca": "node scripts/check-node.mjs && vite build --logLevel warn && node server/index.ts --open --orca",
+    "dev": "node scripts/dev.ts",
+    "build": "vite build",
+    "serve": "node server/index.ts",
+    "check": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p server/tsconfig.json"
+  },
+  "dependencies": {
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
+    "@fontsource/pixelify-sans": "^5.3.0",
+    "marked": "^18.1.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "ws": "^8.22.0",
+    "zustand": "^5.0.15",
+    "zzfx": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/ws": "^8.18.2",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}

@@ -1,0 +1,21 @@
+name: Bug / 버그
+description: Something doesn't work as expected. / 뭔가 예상대로 안 돼요.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens / 무슨 일이 있었나요
+      description: What you did, what you saw, what you expected. A screenshot helps a lot.
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Your computer / 컴퓨터
+      placeholder: "macOS 27, Windows 12, Ubuntu 26.04…"
+  - type: input
+    id: versions
+    attributes:
+      label: Versions / 버전
+      description: The output of `node -v` and `claude --version`.
